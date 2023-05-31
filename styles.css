@@ -13,5 +13,13 @@
     }
   }
 
-  
-  
+
+  .botonVerificador {
+    
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .tituloVerificador{
+    text-align: center;
+  }
