@@ -1848,7 +1848,8 @@
 
        
        
-       <script> // Obtener el elemento de búsqueda
+       <script>
+        // Obtener el elemento de búsqueda
 const searchInput = document.getElementById('form1');
 
 // Agregar un evento de escucha para el evento 'input' que se dispara cuando se introduce texto en el input de búsqueda
@@ -1864,18 +1865,19 @@ searchInput.addEventListener('input', () => {
   // Iterar sobre los elementos y buscar la coincidencia de texto
   elementsWithText.forEach(element => {
     const text = element.textContent.toLowerCase();
-    if (text.includes(searchTerm)) {
+    if (searchTerm !== '' && text.includes(searchTerm)) {
       // Resaltar el elemento que coincide con la búsqueda cambiando su fondo a amarillo
       element.style.backgroundColor = 'yellow';
 
       // Dirigir el scroll hacia el elemento encontrado
       element.scrollIntoView({ behavior: 'smooth', block: 'center' });
     } else {
-      // Restaurar el estilo original de los elementos que no coinciden con la búsqueda
+      // Restaurar el estilo original de los elementos
       element.style.backgroundColor = '';
     }
   });
 });
+
 </script>
 
 </body>
