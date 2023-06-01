@@ -23,3 +23,27 @@
   .tituloVerificador{
     text-align: center;
   }
+
+  h2 {
+    text-align: center;
+  }
+
+
+  
+  .container {
+    display: flex;
+    gap: 5px;
+    /* Espacio de separación entre las tablas */
+}
+
+.table {
+    border: 1px solid black;
+    width: 33%;
+    /* 25% de ancho para cada tabla */
+}
+
+.table td:first-child {
+    background-color: #80e48d;
+    /* Verde claro */
+    font-weight: bold;
+}
