@@ -55,70 +55,80 @@
       </ul>
     </div>
   </nav>
-<br><br><br><br><br><br><br><br><br><br>
+<br>
 
 
 <style>
-table {
-  border-collapse: collapse;
-  transform: rotate(90deg);
+    table {
+      border-collapse: collapse;
+    }
     
-}
+    table, th, td {
+      border: 1px solid black;
+      padding: 10px;
+      font-size: 82%; /* Ajustar el tamaño de la fuente al 50% */
+    }
+    
+    th {
+      background-color: rgb(70, 161, 192);
+      color: white;
+    }
+    
+    td {
+      background-color: white;
+      font-weight: bold;
+    }
+    
+    @media (max-width: 600px) {
+      table, th, td {
+        padding: 5px;
+      }
+    }
+    
+    .pink {
+      background-color: pink;
+    }
+    
+    .green {
+      background-color: green;
+      color: white;
+    }
+    
+    .yellow {
+      background-color: rgb(192, 192, 35);
+    }
+    
+    .darkred {
+      background-color: darkred;
+      color: white;
+    }
+    
+    .lightblue {
+      background-color: rgb(58, 139, 167);
+      color: white;
+    }
+    
+    .red {
+      background-color: red;
+      color: white;
+    }
+    
+    #myDiv {
+        display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Otros estilos para el div */
+  width: 500px;
+  height: 200px;
+  background-color: lightgray;
+    }
+    </style>
 
-table, th, td {
-  border: 1px solid black;
-  padding: 10px;
-}
 
-th {
-  background-color: rgb(70, 161, 192);
-  color: white;
-}
-
-td {
-  background-color: white;
-  font-weight: bold;
-}
-
-@media (max-width: 600px) {
-  table, th, td {
-    padding: 5px;
-  }
-}
-
-.pink {
-  background-color: pink;
-}
-
-.green {
-  background-color: green;
-  color: white;
-}
-
-.yellow {
-  background-color: rgb(192, 192, 35);
-}
-
-.darkred {
-  background-color: darkred;
-  color: white;
-}
-
-.lightblue {
-  background-color: rgb(58, 139, 167);
-  color: white;
-}
-
-.red {
-  background-color: red;
-  color: white;
-}
-</style>
-</head>
-<body>
+    <div id="myDiv">
 <table>
   <tr>
-    <th class="lightblue">CAMARA</th>
+    <th class="lightblue">CÁMARA</th>
     <th class="lightblue">LUNES</th>
     <th class="lightblue">MARTES</th>
     <th class="lightblue">MIERCOLES</th>
@@ -183,7 +193,7 @@ td {
 </table>
 
 
-
+</div>
 
 
 
