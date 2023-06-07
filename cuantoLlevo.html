@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tabla HTML</title>
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+
+    td, th {
+      border: 1px solid black;
+      padding: 8px;
+    }
+
+    .button-container {
+      text-align: right;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>Columna 1</th>
+        <th>Columna 2</th>
+        <th>Columna 3</th>
+        <th>Columna 4</th>
+        <th>Columna 5</th>
+        <th>Columna 6</th>
+        <th>Columna 7</th>
+        <th>Columna 8</th>
+        <th>Columna 9</th>
+        <th>Columna 10</th>
+        <th>Columna 11</th>
+        <th>Columna 12</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Fila 1, Celda 1</td>
+        <td>Fila 1, Celda 2</td>
+        <td>Fila 1, Celda 3</td>
+        <td>Fila 1, Celda 4</td>
+        <td>Fila 1, Celda 5</td>
+        <td>Fila 1, Celda 6</td>
+        <td>Fila 1, Celda 7</td>
+        <td>Fila 1, Celda 8</td>
+        <td>Fila 1, Celda 9</td>
+        <td>Fila 1, Celda 10</td>
+        <td>Fila 1, Celda 11</td>
+        <td>Fila 1, Celda 12</td>
+      </tr>
+
+      <tr>
+        <td>Fila 1, Celda 1</td>
+        <td>Fila 1, Celda 2</td>
+        <td>Fila 1, Celda 3</td>
+        <td>Fila 1, Celda 4</td>
+        <td>Fila 1, Celda 5</td>
+        <td>Fila 1, Celda 6</td>
+        <td>Fila 1, Celda 7</td>
+        <td>Fila 1, Celda 8</td>
+        <td>Fila 1, Celda 9</td>
+        <td>Fila 1, Celda 10</td>
+        <td>Fila 1, Celda 11</td>
+        <td>Fila 1, Celda 12</td>
+      </tr>
+
+      <tr>
+        <td>Fila 1, Celda 1</td>
+        <td>Fila 1, Celda 2</td>
+        <td>Fila 1, Celda 3</td>
+        <td>Fila 1, Celda 4</td>
+        <td>Fila 1, Celda 5</td>
+        <td>Fila 1, Celda 6</td>
+        <td>Fila 1, Celda 7</td>
+        <td>Fila 1, Celda 8</td>
+        <td>Fila 1, Celda 9</td>
+        <td>Fila 1, Celda 10</td>
+        <td>Fila 1, Celda 11</td>
+        <td>Fila 1, Celda 12</td>
+      </tr>
+
+      <tr>
+        <td>Fila 1, Celda 1</td>
+        <td>Fila 1, Celda 2</td>
+        <td>Fila 1, Celda 3</td>
+        <td>Fila 1, Celda 4</td>
+        <td>Fila 1, Celda 5</td>
+        <td>Fila 1, Celda 6</td>
+        <td>Fila 1, Celda 7</td>
+        <td>Fila 1, Celda 8</td>
+        <td>Fila 1, Celda 9</td>
+        <td>Fila 1, Celda 10</td>
+        <td>Fila 1, Celda 11</td>
+        <td>Fila 1, Celda 12</td>
+      </tr>
+
+      <tr>
+        <td>Fila 1, Celda 1</td>
+        <td>Fila 1, Celda 2</td>
+        <td>Fila 1, Celda 3</td>
+        <td>Fila 1, Celda 4</td>
+        <td>Fila 1, Celda 5</td>
+        <td>Fila 1, Celda 6</td>
+        <td>Fila 1, Celda 7</td>
+        <td>Fila 1, Celda 8</td>
+        <td>Fila 1, Celda 9</td>
+        <td>Fila 1, Celda 10</td>
+        <td>Fila 1, Celda 11</td>
+        <td>Fila 1, Celda 12</td>
+      </tr>
+
+      <tr>
+        <td>Fila 7, Celda 1</td>
+        <td>Fila 7, Celda 2</td>
+        <td>Fila 7, Celda 3</td>
+        <td>Fila 7, Celda 4</td>
+        <td>Fila 7, Celda 5</td>
+        <td>Fila 7, Celda 6</td>
+        <td>Fila 7, Celda 7</td>
+        <td>Fila 7, Celda 8</td>
+        <td>Fila 7, Celda 9</td>
+        <td>Fila 7, Celda 10</td>
+        <td>Fila 7, Celda 11</td>
+        <td>Fila 7, Celda 12</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="button-container">
+    <button onclick="limpiarCampos()">Limpiar Campos</button>
+  </div>
+
+  <script>
+    function limpiarCampos() {
+      var filas = document.getElementsByTagName('tr');
+      for (var i = 0; i < filas.length; i++) {
+        var celdas = filas[i].getElementsByTagName('td');
+        for (var j = 2; j < celdas.length; j++) {
+          celdas[j].innerHTML = '';
+        }
+      }
+    }
+  </script>
+</body>
+</html>
