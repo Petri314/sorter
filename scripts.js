@@ -1,3 +1,9 @@
+
+console.log("El archivo scripts.js se cargó correctamente.");
+
+
+
+
 var totalesAcumulados = {}; // Objeto para almacenar los totales acumulados
 
 function sumarFila(input, camara) {
