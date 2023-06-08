@@ -5,6 +5,9 @@
   <style>
     table {
       border-collapse: collapse;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
     }
 
     td, th {
@@ -16,11 +19,25 @@
       text-align: right;
       margin-top: 10px;
     }
+
+    .numero-input {
+      width: 30px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      table {
+        font-size: 12px;
+      }
+
+      .numero-input {
+        width: 10px;
+      }
+    }
   </style>
 </head>
 <body>
 
-    <h2>En proceso...</h2>
+  <h2>En proceso...</h2>
   <table>
     <thead>
       <tr>
@@ -41,93 +58,21 @@
     <tbody>
       <tr>
         <td>Fiambrería</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td class="total-turno"></td>
+        <td><input type="text" class="numero-input" oninput="sumarFila(this)"></td>
+        <td><input type="text" class="numero-input" oninput="sumarFila(this)"></td>
+        <td><input type="text" class="numero-input" oninput="sumarFila(this)"></td>
+        <td><input type="text" class="numero-input" oninput="sumarFila(this)"></td>
+        <td><input type="text" class="numero-input" oninput="sumarFila(this)"></td>
+        <td><input type="text" class="numero-input" oninput="sumarFila(this)"></td>
+        <td><input type="text" class="numero-input" oninput="sumarFila(this)"></td>
+        <td><input type="text" class="numero-input" oninput="sumarFila(this)"></td>
+        <td><input type="text" class="numero-input" oninput="sumarFila(this)"></td>
+        <td><input type="text" class="numero-input" oninput="sumarFila(this)"></td>
       </tr>
 
-      <tr>
-        <td>Vegetales</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
+      <!-- Las otras filas -->
 
-      <tr>
-        <td>Carnes</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-
-      <tr>
-        <td>Congelado</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-
-      <tr>
-        <td>Ekono</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-
-      <tr>
-        <td>Vestuario</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
     </tbody>
   </table>
 
@@ -136,13 +81,33 @@
   </div>
 
   <script>
+    function sumarFila(input) {
+      var fila = input.parentNode.parentNode; // Obtener la fila padre del input
+      var celdas = fila.getElementsByTagName('td');
+      var totalTurnoCelda = celdas[1];
+      var totalTurno = 0;
+
+      for (var i = 2; i < celdas.length; i++) {
+        var valor = parseInt(celdas[i].getElementsByTagName('input')[0].value) || 0;
+        totalTurno += valor;
+      }
+
+      totalTurnoCelda.innerHTML = totalTurno;
+    }
+
     function limpiarCampos() {
       var filas = document.getElementsByTagName('tr');
+
       for (var i = 0; i < filas.length; i++) {
         var celdas = filas[i].getElementsByTagName('td');
+
         for (var j = 2; j < celdas.length; j++) {
-          celdas[j].innerHTML = '';
+          var input = celdas[j].getElementsByTagName('input')[0];
+          input.value = '';
         }
+
+        var totalTurnoCelda = celdas[1];
+        totalTurnoCelda.innerHTML = '';
       }
     }
   </script>
