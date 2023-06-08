@@ -12,26 +12,17 @@
 
     td, th {
       border: 1px solid black;
-      padding: 8px;
+      padding: 0px;
+    
+    }
+
+    .numero-input {
+      width: 6px;
     }
 
     .button-container {
       text-align: right;
       margin-top: 10px;
-    }
-
-    .numero-input {
-      width: 30px;
-    }
-
-    @media only screen and (max-width: 600px) {
-      table {
-        font-size: 12px;
-      }
-
-      .numero-input {
-        width: 10px;
-      }
     }
   </style>
 </head>
@@ -110,6 +101,18 @@
         totalTurnoCelda.innerHTML = '';
       }
     }
+
+    window.addEventListener('DOMContentLoaded', function() {
+      var celdas = document.querySelectorAll('td');
+
+      for (var i = 0; i < celdas.length; i++) {
+        var input = celdas[i].querySelector('input');
+        if (input) {
+          var anchoCelda = celdas[i].offsetWidth;
+          input.style.width = anchoCelda + 'px';
+        }
+      }
+    });
   </script>
 </body>
 </html>
