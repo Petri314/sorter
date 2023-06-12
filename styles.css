@@ -68,46 +68,6 @@
     padding: 0;
 }
 
-.container {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.row {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.square {
-    width: 50%;
-    height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.green {
-    background-color: green;
-}
-
-.blue {
-    background-color: rgb(65, 52, 236);
-}
-
-.yellow {
-    background-color: rgb(201, 201, 98);
-}
-
-.light-red {
-    background-color: lightcoral;
-}
-
-
 
 .green a,
 .blue a,
@@ -127,8 +87,84 @@
 }
 
 
-
-
 .negrita-centrado {
   font-weight: bold;
   text-align: center;}
+
+
+  .btn-group {
+    display: inline-flex;
+    gap: 10px;
+  }
+
+  
+
+  table .calendario {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    text-align: center;
+    padding: 8px;
+    border: 1px solid black;
+  }
+  td:empty {
+    border: 1px solid black;
+  }
+  .semana1 {
+    background-color: rgb(113, 237, 241);
+  }
+  .semana2 {
+    background-color: rgb(127, 127, 145);
+  }
+  .semana3 {
+    background-color: orange;
+  }
+
+  .semana4 {
+      background-color: rgb(113, 237, 241);   
+  }
+
+  .semana5 {
+      background-color: rgb(127, 127, 145);
+
+  }
+
+  .calendarios {
+    display: flex;
+    justify-content: center;
+
+
+  }
+
+  .descripcion {
+    display: flex;
+    align-items: center;
+    margin: 2%;
+  }
+
+  .cuadrado {
+    width: 20px;
+    height: 20px;
+    background-color:  rgb(113, 237, 241);
+    margin-right: 10px;
+  }
+
+  .cuadrado1 {
+    width: 20px;
+    height: 20px;
+    background-color: orange;
+    margin-right: 10px;
+  }
+
+  .cuadrado2 {
+    width: 20px;
+    height: 20px;
+    background-color:  rgb(127, 127, 145);
+    margin-right: 10px;
+  }
+
+
+  img {
+    width: 80%;
+  }
