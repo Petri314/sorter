@@ -40,6 +40,7 @@
       }
     }
   </style>
+  
 </head>
 <body>
 
@@ -92,7 +93,7 @@
       </ul>
     </div>
   </nav>
-
+<div>
   <table class="main-table">
     <thead>
       <tr>
@@ -203,6 +204,44 @@
 
     </tbody>
   </table>
+
+
+
+
+
+  <div id="total-turno-suma"></div>
+
+  <script>
+    function sumarFila(input, className) {
+      var table = document.getElementsByClassName('main-table')[0];
+      var rows = table.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+
+      var total = 0;
+
+      for (var i = 0; i < rows.length; i++) {
+        var row = rows[i];
+        var inputs = row.getElementsByClassName('numero-input');
+
+        var filaTotal = 0;
+
+        for (var j = 0; j < inputs.length; j++) {
+          var inputValue = parseInt(inputs[j].value);
+
+          if (!isNaN(inputValue)) {
+            filaTotal += inputValue;
+          }
+        }
+
+        row.getElementsByClassName('total-turno')[0].textContent = filaTotal;
+        total += filaTotal;
+      }
+
+      document.getElementById('total-turno-suma').textContent = 'Total: ' + total;
+    }
+  </script>
+
+
+  
 
 
   
