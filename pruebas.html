@@ -1,98 +1,125 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="es">
+
 <head>
-  <title>Calendario de Junio 2023</title>
-  <style>
-    table .calendario {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    th, td {
-      text-align: center;
-      padding: 8px;
-      border: 1px solid black;
-    }
-    td:empty {
-      border: 1px solid black;
-    }
-    .semana1 {
-      background-color: rgb(113, 237, 241);
-    }
-    .semana2 {
-      background-color: rgb(127, 127, 145);
-    }
-    .semana3 {
-      background-color: orange;
-    }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
 
-    .semana4 {
-        background-color: rgb(113, 237, 241);   
-    }
 
-    .semana5 {
-        background-color: rgb(127, 127, 145);
-
-    }
-  
-  </style>
 </head>
+
+
 <body>
-  <h1>Calendario de Junio 2023</h1>
-  <table>
-    <tr>
-      <th>Lunes</th>
-      <th>Martes</th>
-      <th>Miércoles</th>
-      <th>Jueves</th>
-      <th>Viernes</th>
-      <th>Sábado</th>
-      <th>Domingo</th>
-    </tr>
-    <tr class="semana1">
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>1</td>
-      <td>2</td>
-      <td>3</td>
-      <td>4</td>
-    </tr>
-    <tr class="semana2">
-      <td>5</td>
-      <td>6</td>
-      <td>7</td>
-      <td>8</td>
-      <td>9</td>
-      <td>10</td>
-      <td>11</td>
-    </tr>
-    <tr class="semana3">
-      <td>12</td>
-      <td>13</td>
-      <td>14</td>
-      <td>15</td>
-      <td>16</td>
-      <td>17</td>
-      <td>18</td>
-    </tr>
-    <tr class="semana4">
-      <td>19</td>
-      <td>20</td>
-      <td>21</td>
-      <td>22</td>
-      <td>23</td>
-      <td>24</td>
-      <td>25</td>
-    </tr>
-    <tr class="semana5">
-      <td>26</td>
-      <td>27</td>
-      <td>28</td>
-      <td>29</td>
-      <td>30</td>
-      <td></td>
-      <td></td>
-    </tr>
-  </table>
+
+
+  <h2>Calendario de turnos <br>Junio 2023</h2>
+
+  <div class="calendarios">
+    <table class="calendario">
+      <tr>
+        <th>Lun</th>
+        <th>Mar</th>
+        <th>Mie</th>
+        <th>Jue</th>
+        <th>Vie</th>
+        <th>Sab</th>
+        <th>Dom</th>
+      </tr>
+      <tr class="semana1">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+      </tr>
+      <tr class="semana2">
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+        <td>10</td>
+        <td>11</td>
+      </tr>
+      <tr class="semana3">
+        <td>12</td>
+        <td>13</td>
+        <td>14</td>
+        <td>15</td>
+        <td>16</td>
+        <td>17</td>
+        <td>18</td>
+      </tr>
+      <tr class="semana4">
+        <td>19</td>
+        <td>20</td>
+        <td style="color: red;">21</td>
+        <td>22</td>
+        <td>23</td>
+        <td>24</td>
+        <td>25</td>
+      </tr>
+      <tr class="semana5">
+        <td>26</td>
+        <td>27</td>
+        <td>28</td>
+        <td>29</td>
+        <td>30</td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+
+
+  <div class="calendarios">
+    <div class="descripcion">
+      <div class="cuadrado"></div>
+      <span>Mañana</span>
+    </div>
+
+    <div class="descripcion">
+      <div class="cuadrado1"></div>
+      <span>Tarde</span>
+    </div>
+
+    <div class="descripcion">
+      <div class="cuadrado2"></div>
+      <span>Noche</span>
+    </div>
+  </div>
+
+
+  <script>
+    // Obtén la fecha actual
+    var currentDate = new Date();
+
+    // Obtén el día actual
+    var currentDay = currentDate.getDate();
+
+    // Busca las celdas de la tabla que contienen los días
+    var table = document.querySelector('.calendario');
+    var cells = table.getElementsByTagName('td');
+
+    for (var i = 0; i < cells.length; i++) {
+      var cell = cells[i];
+      var day = parseInt(cell.innerText);
+
+      // Verifica si el día coincide con el día actual
+      if (day === currentDay) {
+        // Agrega la clase 'current-day' para resaltar el día
+        cell.classList.add('current-day');
+      }
+    }
+  </script>
+
+
 </body>
+
 </html>

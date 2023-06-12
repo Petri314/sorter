@@ -131,6 +131,10 @@
 
   }
 
+  .semana6 {
+    background-color: orange;
+  }
+
   .calendarios {
     display: flex;
     justify-content: center;
@@ -174,3 +178,9 @@
     display: flex;
     justify-content: center;
   }
+
+
+  
+    .current-day {
+        background-color: white;
+    }
