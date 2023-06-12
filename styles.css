@@ -94,7 +94,8 @@
 
   .btn-group {
     display: inline-flex;
-    gap: 10px;
+    gap: 2px;
+    width: auto;
   }
 
   
