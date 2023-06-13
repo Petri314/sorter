@@ -230,4 +230,31 @@
     #resultado {
       margin-top: 20px;
     }
+
+    
+
+
+
+
+    #banner {
+      background-color: black;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+    
+    #text {
+      color: white;
+      white-space: nowrap;
+      animation: scrollText 20s linear infinite;
+    }
+    
+    @keyframes scrollText {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
     

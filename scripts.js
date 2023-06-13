@@ -81,3 +81,20 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
 
+// Opcional: Agrega la fecha actual al texto del banner
+const currentTime = new Date();
+const formattedTime = currentTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+const timeText = document.getElementById('time');
+timeText.textContent += ' (Actualizado a las ' + formattedTime + ')';
+
+// Opcional: Detiene la animación al hacer clic en el banner
+const banner = document.getElementById('banner');
+banner.addEventListener('click', function() {
+  const textAnimation = document.getElementById('text').style.animation;
+  if (textAnimation) {
+    this.style.animationPlayState = 'paused';
+  } else {
+    this.style.animationPlayState = 'running';
+  }
+});
