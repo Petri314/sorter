@@ -212,3 +212,22 @@
       background-color: #006400; /* Color verde más claro en hover */
     }
     
+
+    label {
+      display: inline-block;
+      width: 200px;
+      margin-bottom: 5px;
+    }
+    
+    input, select {
+      width: 150px;
+    }
+    
+    button {
+      margin-top: 10px;
+    }
+    
+    #resultado {
+      margin-top: 20px;
+    }
+    

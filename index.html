@@ -192,6 +192,137 @@
   <img src="/cierre de mes 2023.jpg" alt="">
 </div>
 
+<br><br>
+
+<h2>Calcula tus Horas extras</h2>
+
+<style>
+  body {
+    background-color: #F5F5F5;
+    font-family: Segoe UI, Arial, sans-serif;
+  }
+  
+  .window {
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+  }
+  
+  .window h1 {
+    margin: 0;
+    font-size: 18px;
+    color: #333333;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333333;
+    font-weight: bold;
+  }
+  
+  .form-group input[type="number"],
+  .form-group select {
+    width: 100%;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #CCCCCC;
+  }
+  
+  .form-group button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #0078D7;
+    border: none;
+    color: #FFFFFF;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .form-group button:hover {
+    background-color: #0056B3;
+  }
+  
+  .result {
+    margin-top: 15px;
+    font-weight: bold;
+  }
+</style>
+<div class="window">
+  <div class="form-group">
+    <label for="sueldo">Sueldo:</label>
+    <input type="number" id="sueldo" min="0" step="0.01" inputmode="decimal">
+  </div>
+  <div class="form-group">
+    <label for="movilizacion">Asignación de Movilización:</label>
+    <input type="number" id="movilizacion" min="0" step="0.01" inputmode="decimal">
+  </div>
+  <div class="form-group">
+    <label for="gratificacion">Gratificación:</label>
+    <input type="number" id="gratificacion" min="0" step="0.01" inputmode="decimal">
+  </div>
+  <div class="form-group">
+    <label for="horasExtras">Cantidad de Horas Extras:</label>
+    <input type="number" id="horasExtras" min="0" step="0.01" inputmode="decimal">
+  </div>
+  <div class="form-group">
+    <label for="porcentaje">Porcentaje de Hora Extra:</label>
+    <select id="porcentaje">
+      <option value="0.5">50%</option>
+      <option value="1">100%</option>
+      <option value="1.5">150%</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <button id="calcular">Calcular Horas Extras</button>
+    <button id="limpiar">Limpiar Campos</button>
+  </div>
+  <div class="result">
+    <p id="resultado"></p>
+  </div>
+</div>
+
+<script>
+  function formatNumber(number) {
+    return number.toLocaleString(undefined, { style: 'currency', currency: 'CLP', minimumFractionDigits: 0, maximumFractionDigits: 0 });
+  }
+
+  document.querySelectorAll('input[type="number"]').forEach(function(input) {
+    input.addEventListener('input', function() {
+      var value = this.value.replace(/\D/g, '');
+      this.value = formatNumber(value);
+    });
+  });
+
+  document.getElementById('calcular').addEventListener('click', function() {
+    var sueldo = parseFloat(document.getElementById('sueldo').value.replace(/\D/g, ''));
+    var movilizacion = parseFloat(document.getElementById('movilizacion').value.replace(/\D/g, ''));
+    var gratificacion = parseFloat(document.getElementById('gratificacion').value.replace(/\D/g, ''));
+    var horasExtras = parseFloat(document.getElementById('horasExtras').value.replace(/\D/g, ''));
+    var porcentaje = parseFloat(document.getElementById('porcentaje').value);
+
+    var sueldoFijoMensual = sueldo + movilizacion + gratificacion;
+    var valorHoraOrdinaria = (sueldoFijoMensual / 30) * 28 / 180;
+    var valorHoraExtra = valorHoraOrdinaria * (1 + porcentaje);
+    var montoHoraExtra = valorHoraExtra * horasExtras;
+
+    document.getElementById('resultado').textContent = "El valor de tus horas extras al " + (porcentaje * 100) + "% es: " + formatNumber(montoHoraExtra);
+  });
+
+  document.getElementById('limpiar').addEventListener('click', function() {
+    document.querySelectorAll('input[type="number"]').forEach(function(input) {
+      input.value = "";
+    });
+    document.getElementById('resultado').textContent = "";
+  });
+</script>
 
 
 
