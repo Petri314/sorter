@@ -92,11 +92,6 @@
   text-align: center;}
 
 
-  .btn-group {
-    display: inline-flex;
-    gap: 2px;
-    width: auto;
-  }
 
   
 
@@ -174,14 +169,46 @@
     width: 80%;
   }
 
-  .primerMenu {
-    display: flex;
-    justify-content: center;
-  }
 
 
   
     .current-day {
         background-color: white;
+    }
+
+
+    .primerMenu {
+      display: flex;
+      justify-content: center;
+    }
+    
+    .buttonContainer {
+      display: flex;
+      width: 70%;
+      gap: 2px;
+    }
+    
+    .button {
+      flex-grow: 1;
+      text-align: center;
+      padding: 10px;
+      background-color: rgb(21, 88, 212);
+      color: white;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+    
+    .button:first-child {
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+    }
+    
+    .button:last-child {
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+    
+    .button:hover {
+      background-color: #006400; /* Color verde más claro en hover */
     }
     
