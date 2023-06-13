@@ -1,0 +1,258 @@
+.btn-rectangular {
+    border-radius: 0;
+  }
+  
+  .btn-custom {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+  @media (max-width: 767px) {
+    .btn-custom {
+      font-size: 1rem;
+    }
+  }
+
+
+  .botonVerificador {
+    
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .tituloVerificador{
+    text-align: center;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+
+
+  .container1 {
+    display: flex;
+    gap: 5px;
+    /* Espacio de separación entre las tablas */
+}
+
+.table {
+    border: 1px solid black;
+    width: 33%;
+    /* 25% de ancho para cada tabla */
+}
+
+.table td:first-child {
+    background-color: #80e48d;
+    /* Verde claro */
+    font-weight: bold;
+}
+
+
+.gradient-custom {
+  /* fallback for old browsers */
+  background: #6a11cb;
+  
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+  
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+  }
+
+
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.green a,
+.blue a,
+.yellow a,
+.light-red a {
+    color: rgb(253, 250, 250);
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.green a:hover,
+.blue a:hover,
+.yellow a:hover,
+.light-red a:hover {
+    color: rgb(155, 140, 140);
+}
+
+
+.negrita-centrado {
+  font-weight: bold;
+  text-align: center;}
+
+
+
+  
+
+  table .calendario {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    text-align: center;
+    padding: 8px;
+    border: 1px solid black;
+  }
+  td:empty {
+    border: 1px solid black;
+  }
+  .semana1 {
+    background-color: rgb(113, 237, 241);
+  }
+  .semana2 {
+    background-color: rgb(127, 127, 145);
+  }
+  .semana3 {
+    background-color: orange;
+  }
+
+  .semana4 {
+      background-color: rgb(113, 237, 241);   
+  }
+
+  .semana5 {
+      background-color: rgb(127, 127, 145);
+
+  }
+
+  
+
+  .calendarios {
+    display: flex;
+    justify-content: center;
+
+
+  }
+
+  .descripcion {
+    display: flex;
+    align-items: center;
+    margin: 2%;
+  }
+
+  .cuadrado {
+    width: 20px;
+    height: 20px;
+    background-color:  rgb(113, 237, 241);
+    margin-right: 10px;
+  }
+
+  .cuadrado1 {
+    width: 20px;
+    height: 20px;
+    background-color: orange;
+    margin-right: 10px;
+  }
+
+  .cuadrado2 {
+    width: 20px;
+    height: 20px;
+    background-color:  rgb(127, 127, 145);
+    margin-right: 10px;
+  }
+
+
+  img {
+    width: 80%;
+  }
+
+
+
+  
+    .current-day {
+        background-color: white;
+    }
+
+
+    .primerMenu {
+      display: flex;
+      justify-content: center;
+    }
+    
+    .buttonContainer {
+      display: flex;
+      width: 70%;
+      gap: 2px;
+    }
+    
+    .button {
+      flex-grow: 1;
+      text-align: center;
+      padding: 10px;
+      background-color: rgb(21, 88, 212);
+      color: white;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+    
+    .button:first-child {
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+    }
+    
+    .button:last-child {
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+    
+    .button:hover {
+      background-color: #006400; /* Color verde más claro en hover */
+    }
+    
+
+    label {
+      display: inline-block;
+      width: 200px;
+      margin-bottom: 5px;
+    }
+    
+    input, select {
+      width: 150px;
+    }
+    
+    button {
+      margin-top: 10px;
+    }
+    
+    #resultado {
+      margin-top: 20px;
+    }
+
+    
+
+
+
+
+    #banner {
+      background-color: black;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+    
+    #text {
+      color: white;
+      white-space: nowrap;
+      animation: scrollText 20s linear infinite;
+    }
+    
+    @keyframes scrollText {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+    

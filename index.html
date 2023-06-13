@@ -91,90 +91,168 @@
 
   <br><br>
 
-  <h2>Calendario de turnos <br>Junio 2023</h2>
+  <h2>Calendario de turnos</h2>
 
-<div class="calendarios">
-  <table class="calendario">
-    <tr>
-      <th>Lun</th>
-      <th>Mar</th>
-      <th>Mie</th>
-      <th>Jue</th>
-      <th>Vie</th>
-      <th>Sab</th>
-      <th>Dom</th>
-    </tr>
-    <tr class="semana1">
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>1</td>
-      <td>2</td>
-      <td>3</td>
-      <td>4</td>
-    </tr>
-    <tr class="semana2">
-      <td>5</td>
-      <td>6</td>
-      <td>7</td>
-      <td>8</td>
-      <td>9</td>
-      <td>10</td>
-      <td>11</td>
-    </tr>
-    <tr class="semana3">
-      <td>12</td>
-      <td>13</td>
-      <td>14</td>
-      <td>15</td>
-      <td>16</td>
-      <td>17</td>
-      <td>18</td>
-    </tr>
-    <tr class="semana4">
-      <td>19</td>
-      <td>20</td>
-      <td style="color: red;">21</td>
-      <td>22</td>
-      <td>23</td>
-      <td>24</td>
-      <td>25</td>
-    </tr>
-    <tr class="semana5">
-      <td style="color: red;">26</td>
-      <td>27</td>
-      <td>28</td>
-      <td>29</td>
-      <td>30</td>
-      <td></td>
-      <td></td>
-    </tr>
-  </table>
-</div>
-
-<script>
-  // Obtén la fecha actual
-  var currentDate = new Date();
-
-  // Obtén el día actual
-  var currentDay = currentDate.getDate();
-
-  // Busca las celdas de la tabla que contienen los días
-  var table = document.querySelector('.calendario');
-  var cells = table.getElementsByTagName('td');
-
-  for (var i = 0; i < cells.length; i++) {
+  <div class="calendarios">
+    <table class="calendario">
+      <tr>
+        <th><a href="#" id="anterior">&lt;</a></th>
+        <th colspan="5" id="mes">Junio</th>
+        <th><a href="#" id="siguiente">&gt;</a></th>
+      </tr>
+      <tr>
+        <th>Lun</th>
+        <th>Mar</th>
+        <th>Mie</th>
+        <th>Jue</th>
+        <th>Vie</th>
+        <th>Sab</th>
+        <th>Dom</th>
+      </tr>
+      <tr class="semana1">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+      </tr>
+      <tr class="semana2">
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+        <td>10</td>
+        <td>11</td>
+      </tr>
+      <tr class="semana3">
+        <td>12</td>
+        <td>13</td>
+        <td>14</td>
+        <td>15</td>
+        <td>16</td>
+        <td>17</td>
+        <td>18</td>
+      </tr>
+      <tr class="semana4">
+        <td>19</td>
+        <td>20</td>
+        <td style="color: red;">21</td>
+        <td>22</td>
+        <td>23</td>
+        <td>24</td>
+        <td>25</td>
+      </tr>
+      <tr class="semana5">
+        <td style="color: red;">26</td>
+        <td>27</td>
+        <td>28</td>
+        <td>29</td>
+        <td>30</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="semana6" style="display: none;">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+  
+  <script>
+    var meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+    var mesActual = 5; // Junio (índice 5)
+    var anioActual = 2023;
+  
+    function actualizarCalendario() {
+      var mesElemento = document.getElementById('mes');
+      mesElemento.textContent = meses[mesActual];
+  
+      var calendario = document.querySelector('.calendario');
+      var celdas = calendario.querySelectorAll('td');
+  
+      var primerDia = new Date(anioActual, mesActual, 1);
+      primerDia.setDate(1 + (6 - primerDia.getDay()) % 7);
+  
+      var ultimoDia = new Date(anioActual, mesActual + 1, 0);
+  
+      var totalDias = ultimoDia.getDate();
+      var diaSemana = primerDia.getDay(); // 0: Domingo, 1: Lunes, ..., 6: Sábado
+  
+      diaSemana = diaSemana === 0 ? 6 : diaSemana - 1; // Ajuste para que el sábado sea 1
+  
+      // Calcula la cantidad de semanas necesarias para mostrar todos los días del mes
+      var totalSemanas = Math.ceil((totalDias + diaSemana) / 7);
+  
+      // Oculta todas las filas de semanas
+      var semanas = calendario.querySelectorAll('tr[class^="semana"]');
+      semanas.forEach(function(semana) {
+        semana.style.display = 'none';
+      });
+  
+      // Muestra solo las filas de semanas necesarias para el mes actual
+      for (var i = 0; i < totalSemanas; i++) {
+        semanas[i].style.display = 'table-row';
+      }
+  
+      // Oculta la sexta semana si no hay suficientes días en el mes o es el mes de junio
+      if (totalSemanas < 6 || mesActual === 5) {
+        semanas[5].style.display = 'none';
+      }
+  
+      for (var i = 0; i < celdas.length; i++) {
+        var celda = celdas[i];
+        if (i >= diaSemana && i < diaSemana + totalDias) {
+          celda.textContent = i - diaSemana + 1;
+        } else {
+          celda.textContent = '';
+        }
+      }
+    }
+  
+    function cambiarMesSiguiente() {
+      if (mesActual === 11) {
+        mesActual = 0;
+        anioActual++;
+      } else {
+        mesActual++;
+      }
+      actualizarCalendario();
+    }
+  
+    document.getElementById('siguiente').addEventListener('click', cambiarMesSiguiente);
+  
+    // Código para resaltar el día actual
+    var currentDate = new Date();
+    var currentDay = currentDate.getDate();
+    var table = document.querySelector('.calendario');
+    var cells = table.getElementsByTagName('td');
+  
+    for (var i = 0; i < cells.length; i++) {
       var cell = cells[i];
       var day = parseInt(cell.innerText);
-
-      // Verifica si el día coincide con el día actual
+  
       if (day === currentDay) {
-          // Agrega la clase 'current-day' para resaltar el día
-          cell.classList.add('current-day');
+        cell.classList.add('current-day');
       }
-  }
-</script>
+    }
+  </script>
+  
 
+
+  
+  
+  
+  
+  
+  
 
 
 
