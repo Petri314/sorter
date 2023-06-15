@@ -7,8 +7,8 @@
   <title>Bootstrap demo</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="styles.css" rel="stylesheet">
-  
-  
+
+
 
 </head>
 
@@ -18,11 +18,13 @@
 
   <nav class="navbar navbar-dark bg-dark">
     <div class="d-flex justify-content-center">
-      <a class="navbar-brand" href="https://sorter1.netlify.app/">Sorter <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pyramid" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#7bc62d" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-        <path d="M3 17l9 4l9 -4l-9 -14z" />
-        <path d="M12 3v18" />
-      </svg></a>
+      <a class="navbar-brand" href="https://sorter1.netlify.app/">Sorter <svg xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-pyramid" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="#7bc62d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M3 17l9 4l9 -4l-9 -14z" />
+          <path d="M12 3v18" />
+        </svg></a>
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,9 +39,6 @@
           <a class="nav-link" href="seteoRepo.html">Seteo Repo</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="verificadores.html">Verificadores</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="seteoSemanal.html">Seteo Semanal</a>
         </li>
         <li class="nav-item">
@@ -49,8 +48,8 @@
           <a class="nav-link disabled" href="#">¿Cómo surtir?</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle disabled" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
+          <a class="nav-link dropdown-toggle disabled" href="#" id="navbarDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
             Menú desplegable
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -72,9 +71,9 @@
       Horario de marcación: Entrada turno tarde 14:05 hrs. (14:00 a 14:10) y salida 22:05 hrs. (22:00 a 22:10)
     </span>
   </div>
-  
-  
-  
+
+
+
 
 
   <br>
@@ -82,341 +81,347 @@
   <div class="primerMenu">
     <div class="buttonContainer">
       <a href="seteoRepo.html" class="button">Seteo Repo</a>
-      <a href="verificadores.html" class="button">Verificadores</a>
+      
       <a href="seteoSemanal.html" class="button">Seteo Semanal</a>
       <a href="cuantoLlevo.html" class="button">¿Cuánto Llevo?</a>
     </div>
   </div>
-  
+
 
   <br><br>
 
   <h2>Calendario de turnos</h2>
 
-  <div class="calendarios">
-    <table class="calendario">
-      <tr>
-        <th><a href="#" id="anterior">&lt;</a></th>
-        <th colspan="5" id="mes">Junio</th>
-        <th><a href="#" id="siguiente">&gt;</a></th>
-      </tr>
-      <tr>
-        <th>Lun</th>
-        <th>Mar</th>
-        <th>Mie</th>
-        <th>Jue</th>
-        <th>Vie</th>
-        <th>Sab</th>
-        <th>Dom</th>
-      </tr>
-      <tr class="semana1">
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>1</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-      </tr>
-      <tr class="semana2">
-        <td>5</td>
-        <td>6</td>
-        <td>7</td>
-        <td>8</td>
-        <td>9</td>
-        <td>10</td>
-        <td>11</td>
-      </tr>
-      <tr class="semana3">
-        <td>12</td>
-        <td>13</td>
-        <td>14</td>
-        <td>15</td>
-        <td>16</td>
-        <td>17</td>
-        <td>18</td>
-      </tr>
-      <tr class="semana4">
-        <td>19</td>
-        <td>20</td>
-        <td style="color: red;">21</td>
-        <td>22</td>
-        <td>23</td>
-        <td>24</td>
-        <td>25</td>
-      </tr>
-      <tr class="semana5">
-        <td style="color: red;">26</td>
-        <td>27</td>
-        <td>28</td>
-        <td>29</td>
-        <td>30</td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr class="semana6" style="display: none;">
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
   
-  <script>
-    var meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
-    var mesActual = 5; // Junio (índice 5)
-    var anioActual = 2023;
-  
-    function actualizarCalendario() {
-      var mesElemento = document.getElementById('mes');
-      mesElemento.textContent = meses[mesActual];
-  
-      var calendario = document.querySelector('.calendario');
-      var celdas = calendario.querySelectorAll('td');
-  
-      var primerDia = new Date(anioActual, mesActual, 1);
-      primerDia.setDate(1 + (6 - primerDia.getDay()) % 7);
-  
-      var ultimoDia = new Date(anioActual, mesActual + 1, 0);
-  
-      var totalDias = ultimoDia.getDate();
-      var diaSemana = primerDia.getDay(); // 0: Domingo, 1: Lunes, ..., 6: Sábado
-  
-      diaSemana = diaSemana === 0 ? 6 : diaSemana - 1; // Ajuste para que el sábado sea 1
-  
-      // Calcula la cantidad de semanas necesarias para mostrar todos los días del mes
-      var totalSemanas = Math.ceil((totalDias + diaSemana) / 7);
-  
-      // Oculta todas las filas de semanas
-      var semanas = calendario.querySelectorAll('tr[class^="semana"]');
-      semanas.forEach(function(semana) {
-        semana.style.display = 'none';
-      });
-  
-      // Muestra solo las filas de semanas necesarias para el mes actual
-      for (var i = 0; i < totalSemanas; i++) {
-        semanas[i].style.display = 'table-row';
-      }
-  
-      // Oculta la sexta semana si no hay suficientes días en el mes o es el mes de junio
-      if (totalSemanas < 6 || mesActual === 5) {
-        semanas[5].style.display = 'none';
-      }
-  
-      for (var i = 0; i < celdas.length; i++) {
-        var celda = celdas[i];
-        if (i >= diaSemana && i < diaSemana + totalDias) {
-          celda.textContent = i - diaSemana + 1;
-        } else {
-          celda.textContent = '';
+
+
+      
+      <div class="calendarios">
+        <table class="calendario">
+          <tr>
+            <th><a href="#" id="anterior">&lt;</a></th>
+            <th colspan="5" id="mes">Junio</th>
+            <th><a href="#" id="siguiente">&gt;</a></th>
+          </tr>
+          <tr>
+            <th>Lun</th>
+            <th>Mar</th>
+            <th>Mie</th>
+            <th>Jue</th>
+            <th>Vie</th>
+            <th>Sab</th>
+            <th>Dom</th>
+          </tr>
+          <tr class="semana1">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+          </tr>
+          <tr class="semana2">
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+          </tr>
+          <tr class="semana3">
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
+          </tr>
+          <tr class="semana4">
+            <td>19</td>
+            <td>20</td>
+            <td>21</td>
+            <td>22</td>
+            <td>23</td>
+            <td>24</td>
+            <td>25</td>
+          </tr>
+          <tr class="semana5">
+            <td>26</td>
+            <td>27</td>
+            <td>28</td>
+            <td>29</td>
+            <td>30</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="semana6" style="display: none;">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+      
+      <script>
+        var meses = ['Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+        var mesActual = 0; // Junio (índice 0)
+        var anioActual = 2023;
+      
+        function actualizarCalendario() {
+          var mesElemento = document.getElementById('mes');
+          mesElemento.textContent = meses[mesActual];
+      
+          var calendario = document.querySelector('.calendario');
+          var celdas = calendario.querySelectorAll('td');
+      
+          var diasInicioMes = [3, 5, 1, 4, 6, 2, 4]; // Día de inicio de cada mes
+          var diasFinMes = [30, 31, 31, 30, 31, 30, 31]; // Día de fin de cada mes
+      
+          var diaInicio = diasInicioMes[mesActual];
+          var diaFin = diasFinMes[mesActual];
+      
+          for (var i = 0; i < celdas.length; i++) {
+            var celda = celdas[i];
+            celda.textContent = '';
+      
+            if (i >= diaInicio && i < diaInicio + diaFin) {
+              celda.textContent = i - diaInicio + 1;
+            }
+          }
+      
+          var totalSemanas = Math.ceil((diaFin + diaInicio) / 7);
+          var semanas = calendario.querySelectorAll('tr[class^="semana"]');
+      
+          for (var i = 0; i < semanas.length; i++) {
+            if (i < totalSemanas) {
+              semanas[i].style.display = 'table-row';
+            } else {
+              semanas[i].style.display = 'none';
+            }
+          }
+      
+          // Mostrar sexta semana si es necesaria
+          if (totalSemanas === 6) {
+            semanas[5].style.display = 'table-row';
+          } else {
+            semanas[5].style.display = 'none';
+          }
         }
-      }
+      
+        function cambiarMesSiguiente() {
+          if (mesActual === 6) {
+            mesActual = 0;
+            anioActual++;
+          } else {
+            mesActual++;
+          }
+          actualizarCalendario();
+        }
+      
+        document.getElementById('siguiente').addEventListener('click', cambiarMesSiguiente);
+      
+        // Código para resaltar el día actual
+        var currentDate = new Date();
+        var currentMonth = currentDate.getMonth();
+        var currentDay = currentDate.getDate();
+        var table = document.querySelector('.calendario');
+        var cells = table.getElementsByTagName('td');
+      
+        if (currentMonth === mesActual) {
+          for (var i = 0; i < cells.length; i++) {
+            var cell = cells[i];
+            var day = parseInt(cell.innerText);
+      
+            if (day === currentDay) {
+              cell.classList.add('current-day');
+            }
+          }
+        }
+      
+        actualizarCalendario();
+      </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="calendarios">
+    <div class="descripcion">
+      <div class="cuadrado"></div>
+      <span>Mañana</span>
+    </div>
+
+    <div class="descripcion">
+      <div class="cuadrado1"></div>
+      <span>Tarde</span>
+    </div>
+
+    <div class="descripcion">
+      <div class="cuadrado2"></div>
+      <span>Noche</span>
+    </div>
+  </div>
+
+  <br><br>
+  <div class="calendarios">
+    <img src="/cierre de mes 2023.jpg" alt="">
+  </div>
+
+  <br><br><br>
+
+  <h2>Calcula tus Horas extras</h2>
+
+  <style>
+    body {
+      background-color: #F5F5F5;
+      font-family: Segoe UI, Arial, sans-serif;
     }
-  
-    function cambiarMesSiguiente() {
-      if (mesActual === 11) {
-        mesActual = 0;
-        anioActual++;
-      } else {
-        mesActual++;
-      }
-      actualizarCalendario();
+
+    .window {
+      background-color: #FFFFFF;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      width: 400px;
+      margin: 50px auto;
+      padding: 20px;
     }
-  
-    document.getElementById('siguiente').addEventListener('click', cambiarMesSiguiente);
-  
-    // Código para resaltar el día actual
-    var currentDate = new Date();
-    var currentDay = currentDate.getDate();
-    var table = document.querySelector('.calendario');
-    var cells = table.getElementsByTagName('td');
-  
-    for (var i = 0; i < cells.length; i++) {
-      var cell = cells[i];
-      var day = parseInt(cell.innerText);
-  
-      if (day === currentDay) {
-        cell.classList.add('current-day');
-      }
+
+    .window h1 {
+      margin: 0;
+      font-size: 18px;
+      color: #333333;
     }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      color: #333333;
+      font-weight: bold;
+    }
+
+    .form-group input[type="number"],
+    .form-group select {
+      width: 100%;
+      padding: 5px;
+      border-radius: 3px;
+      border: 1px solid #CCCCCC;
+    }
+
+    .form-group button {
+      margin-top: 10px;
+      padding: 8px 15px;
+      background-color: #0078D7;
+      border: none;
+      color: #FFFFFF;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .form-group button:hover {
+      background-color: #0056B3;
+    }
+
+    .result {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+  <div class="window">
+    <div class="form-group">
+      <label for="sueldo">Sueldo:</label>
+      <input type="number" id="sueldo" min="0" step="0.01" inputmode="decimal">
+    </div>
+    <div class="form-group">
+      <label for="movilizacion">Asignación de Movilización:</label>
+      <input type="number" id="movilizacion" min="0" step="0.01" inputmode="decimal">
+    </div>
+    <div class="form-group">
+      <label for="gratificacion">Gratificación:</label>
+      <input type="number" id="gratificacion" min="0" step="0.01" inputmode="decimal">
+    </div>
+    <div class="form-group">
+      <label for="horasExtras">Cantidad de Horas Extras:</label>
+      <input type="number" id="horasExtras" min="0" step="0.01" inputmode="decimal">
+    </div>
+    <div class="form-group">
+      <label for="porcentaje">Porcentaje de Hora Extra:</label>
+      <select id="porcentaje">
+        <option value="0.5">50%</option>
+        <option value="1">100%</option>
+        <option value="1.5">150%</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <button id="calcular">Calcular Horas Extras</button>
+      <button id="limpiar">Limpiar Campos</button>
+    </div>
+    <div class="result">
+      <p id="resultado"></p>
+    </div>
+  </div>
+
+  <script>
+    function formatNumber(number) {
+      return number.toLocaleString(undefined, { style: 'currency', currency: 'CLP', minimumFractionDigits: 0, maximumFractionDigits: 0 });
+    }
+
+    document.querySelectorAll('input[type="number"]').forEach(function (input) {
+      input.addEventListener('input', function () {
+        var value = this.value.replace(/\D/g, '');
+        this.value = formatNumber(value);
+      });
+    });
+
+    document.getElementById('calcular').addEventListener('click', function () {
+      var sueldo = parseFloat(document.getElementById('sueldo').value.replace(/\D/g, ''));
+      var movilizacion = parseFloat(document.getElementById('movilizacion').value.replace(/\D/g, ''));
+      var gratificacion = parseFloat(document.getElementById('gratificacion').value.replace(/\D/g, ''));
+      var horasExtras = parseFloat(document.getElementById('horasExtras').value.replace(/\D/g, ''));
+      var porcentaje = parseFloat(document.getElementById('porcentaje').value);
+
+      var sueldoFijoMensual = sueldo + movilizacion + gratificacion;
+      var valorHoraOrdinaria = (sueldoFijoMensual / 30) * 28 / 180;
+      var valorHoraExtra = valorHoraOrdinaria * (1 + porcentaje);
+      var montoHoraExtra = valorHoraExtra * horasExtras;
+
+      document.getElementById('resultado').textContent = "El valor de tus horas extras al " + (porcentaje * 100) + "% es: " + formatNumber(montoHoraExtra);
+    });
+
+    document.getElementById('limpiar').addEventListener('click', function () {
+      document.querySelectorAll('input[type="number"]').forEach(function (input) {
+        input.value = "";
+      });
+      document.getElementById('resultado').textContent = "";
+    });
   </script>
-  
-
-
-  
-  
-  
-  
-  
-  
 
 
 
 
 
-
-<div class="calendarios">
-  <div class="descripcion">
-    <div class="cuadrado"></div>
-    <span>Mañana</span>
-  </div>
-
-  <div class="descripcion">
-    <div class="cuadrado1"></div>
-    <span>Tarde</span>
-  </div>
-
-  <div class="descripcion">
-    <div class="cuadrado2"></div>
-    <span>Noche</span>
-  </div>
-</div>
-
-<br><br>
-<div class="calendarios">
-  <img src="/cierre de mes 2023.jpg" alt="">
-</div>
-
-<br><br><br>
-
-<h2>Calcula tus Horas extras</h2>
-
-<style>
-  body {
-    background-color: #F5F5F5;
-    font-family: Segoe UI, Arial, sans-serif;
-  }
-  
-  .window {
-    background-color: #FFFFFF;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    width: 400px;
-    margin: 50px auto;
-    padding: 20px;
-  }
-  
-  .window h1 {
-    margin: 0;
-    font-size: 18px;
-    color: #333333;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .form-group label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333333;
-    font-weight: bold;
-  }
-  
-  .form-group input[type="number"],
-  .form-group select {
-    width: 100%;
-    padding: 5px;
-    border-radius: 3px;
-    border: 1px solid #CCCCCC;
-  }
-  
-  .form-group button {
-    margin-top: 10px;
-    padding: 8px 15px;
-    background-color: #0078D7;
-    border: none;
-    color: #FFFFFF;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  .form-group button:hover {
-    background-color: #0056B3;
-  }
-  
-  .result {
-    margin-top: 15px;
-    font-weight: bold;
-  }
-</style>
-<div class="window">
-  <div class="form-group">
-    <label for="sueldo">Sueldo:</label>
-    <input type="number" id="sueldo" min="0" step="0.01" inputmode="decimal">
-  </div>
-  <div class="form-group">
-    <label for="movilizacion">Asignación de Movilización:</label>
-    <input type="number" id="movilizacion" min="0" step="0.01" inputmode="decimal">
-  </div>
-  <div class="form-group">
-    <label for="gratificacion">Gratificación:</label>
-    <input type="number" id="gratificacion" min="0" step="0.01" inputmode="decimal">
-  </div>
-  <div class="form-group">
-    <label for="horasExtras">Cantidad de Horas Extras:</label>
-    <input type="number" id="horasExtras" min="0" step="0.01" inputmode="decimal">
-  </div>
-  <div class="form-group">
-    <label for="porcentaje">Porcentaje de Hora Extra:</label>
-    <select id="porcentaje">
-      <option value="0.5">50%</option>
-      <option value="1">100%</option>
-      <option value="1.5">150%</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <button id="calcular">Calcular Horas Extras</button>
-    <button id="limpiar">Limpiar Campos</button>
-  </div>
-  <div class="result">
-    <p id="resultado"></p>
-  </div>
-</div>
-
-<script>
-  function formatNumber(number) {
-    return number.toLocaleString(undefined, { style: 'currency', currency: 'CLP', minimumFractionDigits: 0, maximumFractionDigits: 0 });
-  }
-
-  document.querySelectorAll('input[type="number"]').forEach(function(input) {
-    input.addEventListener('input', function() {
-      var value = this.value.replace(/\D/g, '');
-      this.value = formatNumber(value);
-    });
-  });
-
-  document.getElementById('calcular').addEventListener('click', function() {
-    var sueldo = parseFloat(document.getElementById('sueldo').value.replace(/\D/g, ''));
-    var movilizacion = parseFloat(document.getElementById('movilizacion').value.replace(/\D/g, ''));
-    var gratificacion = parseFloat(document.getElementById('gratificacion').value.replace(/\D/g, ''));
-    var horasExtras = parseFloat(document.getElementById('horasExtras').value.replace(/\D/g, ''));
-    var porcentaje = parseFloat(document.getElementById('porcentaje').value);
-
-    var sueldoFijoMensual = sueldo + movilizacion + gratificacion;
-    var valorHoraOrdinaria = (sueldoFijoMensual / 30) * 28 / 180;
-    var valorHoraExtra = valorHoraOrdinaria * (1 + porcentaje);
-    var montoHoraExtra = valorHoraExtra * horasExtras;
-
-    document.getElementById('resultado').textContent = "El valor de tus horas extras al " + (porcentaje * 100) + "% es: " + formatNumber(montoHoraExtra);
-  });
-
-  document.getElementById('limpiar').addEventListener('click', function() {
-    document.querySelectorAll('input[type="number"]').forEach(function(input) {
-      input.value = "";
-    });
-    document.getElementById('resultado').textContent = "";
-  });
-</script>
-
-
-
-  
-  
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
