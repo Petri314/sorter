@@ -71,9 +71,9 @@
       Horario de marcación: Entrada turno tarde 14:05 hrs. (14:00 a 14:10) y salida 22:05 hrs. (22:00 a 22:10)
     </span>
   </div>
-  
-  
-  
+
+
+
 
 
   <br>
@@ -81,7 +81,7 @@
   <div class="primerMenu">
     <div class="buttonContainer">
       <a href="seteoRepo.html" class="button">Seteo Repo</a>
-      
+
       <a href="seteoSemanal.html" class="button">Seteo Semanal</a>
       <a href="cuantoLlevo.html" class="button">¿Cuánto Llevo?</a>
     </div>
@@ -92,162 +92,162 @@
 
   <h2>Calendario de turnos</h2>
 
-  
 
 
-      
-      <div class="calendarios">
-        <table class="calendario">
-          <tr>
-            <th><a href="#" id="anterior">&lt;</a></th>
-            <th colspan="5" id="mes">Junio</th>
-            <th><a href="#" id="siguiente">&gt;</a></th>
-          </tr>
-          <tr>
-            <th>Lun</th>
-            <th>Mar</th>
-            <th>Mie</th>
-            <th>Jue</th>
-            <th>Vie</th>
-            <th>Sab</th>
-            <th>Dom</th>
-          </tr>
-          <tr class="semana1">
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-          </tr>
-          <tr class="semana2">
-            <td>5</td>
-            <td>6</td>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
-            <td>10</td>
-            <td>11</td>
-          </tr>
-          <tr class="semana3">
-            <td>12</td>
-            <td>13</td>
-            <td>14</td>
-            <td>15</td>
-            <td>16</td>
-            <td>17</td>
-            <td>18</td>
-          </tr>
-          <tr class="semana4">
-            <td>19</td>
-            <td>20</td>
-            <td>21</td>
-            <td>22</td>
-            <td>23</td>
-            <td>24</td>
-            <td>25</td>
-          </tr>
-          <tr class="semana5">
-            <td>26</td>
-            <td>27</td>
-            <td>28</td>
-            <td>29</td>
-            <td>30</td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr class="semana6" style="display: none;">
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-        </table>
-      </div>
-      
-      <script>
-        var meses = ['Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
-        var mesActual = 0; // Junio (índice 0)
-        var anioActual = 2023;
-      
-        function actualizarCalendario() {
-          var mesElemento = document.getElementById('mes');
-          mesElemento.textContent = meses[mesActual];
-      
-          var calendario = document.querySelector('.calendario');
-          var celdas = calendario.querySelectorAll('td');
-      
-          var diasInicioMes = [3, 5, 1, 4, 6, 2, 4]; // Día de inicio de cada mes
-          var diasFinMes = [30, 31, 31, 30, 31, 30, 31]; // Día de fin de cada mes
-      
-          var diaInicio = diasInicioMes[mesActual];
-          var diaFin = diasFinMes[mesActual];
-      
-          for (var i = 0; i < celdas.length; i++) {
-            var celda = celdas[i];
-            celda.textContent = '';
-      
-            if (i >= diaInicio && i < diaInicio + diaFin) {
-              celda.textContent = i - diaInicio + 1;
-            }
-          }
-      
-          var totalSemanas = Math.ceil((diaFin + diaInicio) / 7);
-          var semanas = calendario.querySelectorAll('tr[class^="semana"]');
-      
-          for (var i = 0; i < semanas.length; i++) {
-            if (i < totalSemanas) {
-              semanas[i].style.display = 'table-row';
-            } else {
-              semanas[i].style.display = 'none';
-            }
-          }
-      
-          // Mostrar sexta semana si es necesaria
-          if (totalSemanas === 6) {
-            semanas[5].style.display = 'table-row';
-          } else {
-            semanas[5].style.display = 'none';
-          }
+
+
+  <div class="calendarios">
+    <table class="calendario">
+      <tr>
+        <th><a href="#" id="anterior">&lt;</a></th>
+        <th colspan="5" id="mes">Junio</th>
+        <th><a href="#" id="siguiente">&gt;</a></th>
+      </tr>
+      <tr>
+        <th>Lun</th>
+        <th>Mar</th>
+        <th>Mie</th>
+        <th>Jue</th>
+        <th>Vie</th>
+        <th>Sab</th>
+        <th>Dom</th>
+      </tr>
+      <tr class="semana1">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+      </tr>
+      <tr class="semana2">
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+        <td>10</td>
+        <td>11</td>
+      </tr>
+      <tr class="semana3">
+        <td>12</td>
+        <td>13</td>
+        <td>14</td>
+        <td>15</td>
+        <td>16</td>
+        <td>17</td>
+        <td>18</td>
+      </tr>
+      <tr class="semana4">
+        <td>19</td>
+        <td>20</td>
+        <td>21</td>
+        <td>22</td>
+        <td>23</td>
+        <td>24</td>
+        <td>25</td>
+      </tr>
+      <tr class="semana5">
+        <td>26</td>
+        <td>27</td>
+        <td>28</td>
+        <td>29</td>
+        <td>30</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="semana6" style="display: none;">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <script>
+    var meses = ['Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+    var mesActual = 0; // Junio (índice 0)
+    var anioActual = 2023;
+
+    function actualizarCalendario() {
+      var mesElemento = document.getElementById('mes');
+      mesElemento.textContent = meses[mesActual];
+
+      var calendario = document.querySelector('.calendario');
+      var celdas = calendario.querySelectorAll('td');
+
+      var diasInicioMes = [3, 5, 1, 4, 6, 2, 4]; // Día de inicio de cada mes
+      var diasFinMes = [30, 31, 31, 30, 31, 30, 31]; // Día de fin de cada mes
+
+      var diaInicio = diasInicioMes[mesActual];
+      var diaFin = diasFinMes[mesActual];
+
+      for (var i = 0; i < celdas.length; i++) {
+        var celda = celdas[i];
+        celda.textContent = '';
+
+        if (i >= diaInicio && i < diaInicio + diaFin) {
+          celda.textContent = i - diaInicio + 1;
         }
-      
-        function cambiarMesSiguiente() {
-          if (mesActual === 6) {
-            mesActual = 0;
-            anioActual++;
-          } else {
-            mesActual++;
-          }
-          actualizarCalendario();
+      }
+
+      var totalSemanas = Math.ceil((diaFin + diaInicio) / 7);
+      var semanas = calendario.querySelectorAll('tr[class^="semana"]');
+
+      for (var i = 0; i < semanas.length; i++) {
+        if (i < totalSemanas) {
+          semanas[i].style.display = 'table-row';
+        } else {
+          semanas[i].style.display = 'none';
         }
-      
-        document.getElementById('siguiente').addEventListener('click', cambiarMesSiguiente);
-      
-        // Código para resaltar el día actual
-        var currentDate = new Date();
-        var currentMonth = currentDate.getMonth();
-        var currentDay = currentDate.getDate();
-        var table = document.querySelector('.calendario');
-        var cells = table.getElementsByTagName('td');
-      
-        if (currentMonth === mesActual) {
-          for (var i = 0; i < cells.length; i++) {
-            var cell = cells[i];
-            var day = parseInt(cell.innerText);
-      
-            if (day === currentDay) {
-              cell.classList.add('current-day');
-            }
-          }
+      }
+
+      // Mostrar sexta semana si es necesaria
+      if (totalSemanas === 6) {
+        semanas[5].style.display = 'table-row';
+      } else {
+        semanas[5].style.display = 'none';
+      }
+    }
+
+    function cambiarMesSiguiente() {
+      if (mesActual === 6) {
+        mesActual = 0;
+        anioActual++;
+      } else {
+        mesActual++;
+      }
+      actualizarCalendario();
+    }
+
+    document.getElementById('siguiente').addEventListener('click', cambiarMesSiguiente);
+
+    // Código para resaltar el día actual
+    var currentDate = new Date();
+    var currentMonth = currentDate.getMonth();
+    var currentDay = currentDate.getDate();
+    var table = document.querySelector('.calendario');
+    var cells = table.getElementsByTagName('td');
+
+    if (currentMonth === mesActual) {
+      for (var i = 0; i < cells.length; i++) {
+        var cell = cells[i];
+        var day = parseInt(cell.innerText);
+
+        if (day === currentDay) {
+          cell.classList.add('current-day');
         }
-      
-        actualizarCalendario();
-      </script>
-  
+      }
+    }
+
+    actualizarCalendario();
+  </script>
+
 
 
 
@@ -386,13 +386,9 @@
 
   <script>
     function formatNumber(number) {
-  return number.toLocaleString(undefined, {
-    style: 'currency',
-    currency: 'CLP',
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2
-  });
+  return number.toLocaleString(undefined, { style: 'currency', currency: 'CLP', minimumFractionDigits: 2, maximumFractionDigits: 2 });
 }
+
 
 
     document.querySelectorAll('input[type="number"]').forEach(function (input) {
@@ -406,13 +402,14 @@
       var sueldo = parseFloat(document.getElementById('sueldo').value.replace(/\D/g, ''));
       var movilizacion = parseFloat(document.getElementById('movilizacion').value.replace(/\D/g, ''));
       var gratificacion = parseFloat(document.getElementById('gratificacion').value.replace(/\D/g, ''));
-      var horasExtras = parseFloat(document.getElementById('horasExtras').value.replace(/\D/g, ''));
+      var horasExtras = parseFloat(document.getElementById('horasExtras').value);
       var porcentaje = parseFloat(document.getElementById('porcentaje').value);
 
       var sueldoFijoMensual = sueldo + movilizacion + gratificacion;
       var valorHoraOrdinaria = (sueldoFijoMensual / 30) * 28 / 180;
       var valorHoraExtra = valorHoraOrdinaria * (1 + porcentaje);
       var montoHoraExtra = valorHoraExtra * horasExtras;
+
 
       document.getElementById('resultado').textContent = "El valor de tus horas extras al " + (porcentaje * 100) + "% es: " + formatNumber(montoHoraExtra);
     });
