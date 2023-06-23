@@ -389,8 +389,7 @@
       return number.toLocaleString(undefined, {
         style: 'currency',
         currency: 'CLP',
-        useGrouping: true, 
-      });
+      }).replace(/,/g, '.');
     }
 
 
@@ -424,6 +423,7 @@
       document.getElementById('resultado').textContent = "";
     });
   </script>
+
 
 
 
