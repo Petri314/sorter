@@ -403,7 +403,7 @@
       var sueldo = parseFloat(document.getElementById('sueldo').value.replace(/\D/g, ''));
       var movilizacion = parseFloat(document.getElementById('movilizacion').value.replace(/\D/g, ''));
       var gratificacion = parseFloat(document.getElementById('gratificacion').value.replace(/\D/g, ''));
-      var horasExtras = document.getElementById('horasExtras').value;
+      var horasExtras = parseFloat(document.getElementById('horasExtras').value.replace(',', '.'));
       var porcentaje = parseFloat(document.getElementById('porcentaje').value);
 
       if (isNaN(horasExtras)) {
@@ -411,13 +411,12 @@
         return;
       }
 
-      horasExtras = parseFloat(horasExtras);
       var sueldoFijoMensual = sueldo + movilizacion + gratificacion;
       var valorHoraOrdinaria = (sueldoFijoMensual / 30) * 28 / 180;
       var valorHoraExtra = valorHoraOrdinaria * (1 + porcentaje);
       var montoHoraExtra = valorHoraExtra * horasExtras;
 
-      document.getElementById('resultado').textContent = "El valor de tus horas extras al " + (porcentaje * 100) + "% es: " + formatNumber(montoHoraExtra);
+      document.getElementById('resultado').textContent = "El valor de tus horas extras al " + (porcentaje * 100) + "% es: " + formatNumber(montoHoraExtra.toFixed(2));
     });
 
     document.getElementById('limpiar').addEventListener('click', function () {
