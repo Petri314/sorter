@@ -389,48 +389,41 @@
       return number.toLocaleString(undefined, {
         style: 'currency',
         currency: 'CLP',
-      }).replace(/,/g, '.');
+        
+      });
     }
 
-    function parseDecimal(value) {
-      var decimalValue = value.replace(/[^0-9,]/g, '');
-      decimalValue = decimalValue.replace(/,/, '.'); // Reemplaza la coma por el punto
-      return decimalValue;
-    }
 
-    document.querySelectorAll('input[type="text"][data-decimal]').forEach(function (input) {
+    document.querySelectorAll('input[type="number"]').forEach(function (input) {
       input.addEventListener('input', function () {
-        var value = parseDecimal(this.value);
+        var value = this.value.replace(/\D/g, '');
         this.value = formatNumber(value);
       });
     });
 
     document.getElementById('calcular').addEventListener('click', function () {
-      var sueldo = parseFloat(parseDecimal(document.getElementById('sueldo').value));
-      var movilizacion = parseFloat(parseDecimal(document.getElementById('movilizacion').value));
-      var gratificacion = parseFloat(parseDecimal(document.getElementById('gratificacion').value));
-      var horasExtras = parseFloat(parseDecimal(document.getElementById('horasExtras').value));
-      var porcentaje = parseFloat(parseDecimal(document.getElementById('porcentaje').value));
+      var sueldo = parseFloat(document.getElementById('sueldo').value.replace(/\D/g, ''));
+      var movilizacion = parseFloat(document.getElementById('movilizacion').value.replace(/\D/g, ''));
+      var gratificacion = parseFloat(document.getElementById('gratificacion').value.replace(/\D/g, ''));
+      var horasExtras = parseFloat(document.getElementById('horasExtras').value);
+      var porcentaje = parseFloat(document.getElementById('porcentaje').value);
 
       var sueldoFijoMensual = sueldo + movilizacion + gratificacion;
       var valorHoraOrdinaria = (sueldoFijoMensual / 30) * 28 / 180;
-      var valorHoraExtra = valorHoraOrdinaria * (1 + porcentaje / 100); // Dividir por 100 para obtener el porcentaje correcto
+      var valorHoraExtra = valorHoraOrdinaria * (1 + porcentaje);
       var montoHoraExtra = valorHoraExtra * horasExtras;
 
-      var resultadoElement = document.getElementById('resultado');
-      resultadoElement.textContent = "El valor de tus horas extras al " + porcentaje + "% es: " + formatNumber(montoHoraExtra);
-      resultadoElement.style.fontSize = '24px';
-      resultadoElement.style.fontWeight = 'bold';
+
+      document.getElementById('resultado').textContent = "El valor de tus horas extras al " + (porcentaje * 100) + "% es: " + formatNumber(montoHoraExtra);
     });
 
     document.getElementById('limpiar').addEventListener('click', function () {
-      document.querySelectorAll('input[type="text"][data-decimal]').forEach(function (input) {
+      document.querySelectorAll('input[type="number"]').forEach(function (input) {
         input.value = "";
       });
       document.getElementById('resultado').textContent = "";
     });
-</script>
-
+  </script>
 
 
 
