@@ -386,8 +386,14 @@
 
   <script>
     function formatNumber(number) {
-      return number.toLocaleString(undefined, { style: 'currency', currency: 'CLP', minimumFractionDigits: 0, maximumFractionDigits: 0 });
-    }
+  return number.toLocaleString(undefined, {
+    style: 'currency',
+    currency: 'CLP',
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  });
+}
+
 
     document.querySelectorAll('input[type="number"]').forEach(function (input) {
       input.addEventListener('input', function () {
