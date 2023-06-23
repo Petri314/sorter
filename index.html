@@ -394,16 +394,16 @@
 
     document.querySelectorAll('input[type="number"]').forEach(function (input) {
       input.addEventListener('input', function () {
-        var value = this.value.replace(/[^\d.]/g, '');
+        var value = this.value.replace(/[^0-9.]/g, '');
         this.value = formatNumber(value);
       });
     });
 
     document.getElementById('calcular').addEventListener('click', function () {
-      var sueldo = parseFloat(document.getElementById('sueldo').value.replace(/[^\d.]/g, ''));
-      var movilizacion = parseFloat(document.getElementById('movilizacion').value.replace(/[^\d.]/g, ''));
-      var gratificacion = parseFloat(document.getElementById('gratificacion').value.replace(/[^\d.]/g, ''));
-      var horasExtras = parseFloat(document.getElementById('horasExtras').value.replace(',', '.'));
+      var sueldo = parseFloat(document.getElementById('sueldo').value.replace(/[^0-9.]/g, ''));
+      var movilizacion = parseFloat(document.getElementById('movilizacion').value.replace(/[^0-9.]/g, ''));
+      var gratificacion = parseFloat(document.getElementById('gratificacion').value.replace(/[^0-9.]/g, ''));
+      var horasExtras = parseFloat(document.getElementById('horasExtras').value);
       var porcentaje = parseFloat(document.getElementById('porcentaje').value);
 
       var sueldoFijoMensual = sueldo + movilizacion + gratificacion;
