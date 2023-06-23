@@ -412,8 +412,10 @@
       var valorHoraExtra = valorHoraOrdinaria * (1 + porcentaje);
       var montoHoraExtra = valorHoraExtra * horasExtras;
 
-
-      document.getElementById('resultado').textContent = "El valor de tus horas extras al " + (porcentaje * 100) + "% es: " + formatNumber(montoHoraExtra);
+      var resultadoElement = document.getElementById('resultado');
+      resultadoElement.textContent = "El valor de tus horas extras al " + (porcentaje * 100) + "% es: " + formatNumber(montoHoraExtra);
+      resultadoElement.style.fontSize = '24px'; // Ajusta el tamaño de fuente según tus preferencias
+      resultadoElement.style.fontWeight = 'bold'; // Opcional: Aplica negrita al resultado
     });
 
     document.getElementById('limpiar').addEventListener('click', function () {
