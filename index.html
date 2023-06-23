@@ -403,7 +403,7 @@
       var sueldo = parseFloat(document.getElementById('sueldo').value.replace(/[^\d.]/g, ''));
       var movilizacion = parseFloat(document.getElementById('movilizacion').value.replace(/[^\d.]/g, ''));
       var gratificacion = parseFloat(document.getElementById('gratificacion').value.replace(/[^\d.]/g, ''));
-      var horasExtras = parseFloat(document.getElementById('horasExtras').value);
+      var horasExtras = parseFloat(document.getElementById('horasExtras').value.replace('.', ','));
       var porcentaje = parseFloat(document.getElementById('porcentaje').value);
 
       var sueldoFijoMensual = sueldo + movilizacion + gratificacion;
