@@ -536,7 +536,7 @@
     </div>
     <div class="form-group">
       <label for="horasExtras">Cantidad de Horas Extras:</label>
-      <input type="text" id="horasExtras" min="0" inputmode="numeric">
+      <input type="text" id="horasExtras" min="0" inputmode="numeric" placeholder="3.44">
     </div>
     <div class="form-group">
       <label for="porcentaje">Porcentaje de Hora Extra:</label>
@@ -581,7 +581,7 @@
       var porcentaje = parseFloat(document.getElementById('porcentaje').value);
 
       var sueldoFijoMensual = sueldo + movilizacion + gratificacion;
-      var valorHoraOrdinaria = (sueldoFijoMensual / 30) * 28 / 180;
+      var valorHoraOrdinaria = (((sueldoFijoMensual / 30) * 28) / 180);
       var valorHoraExtra = valorHoraOrdinaria * (1 + porcentaje);
       var montoHoraExtra = valorHoraExtra * horasExtras;
 
