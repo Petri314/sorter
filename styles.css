@@ -151,7 +151,7 @@ td:empty {
 .cuadrado {
   width: 20px;
   height: 20px;
-  background-color: rgb(113, 237, 241);
+  background-color: rgb(211, 235, 106);
   margin-right: 10px;
 }
 
@@ -165,7 +165,7 @@ td:empty {
 .cuadrado2 {
   width: 20px;
   height: 20px;
-  background-color: rgb(127, 127, 145);
+  background-color: rgb(123, 124, 219);
   margin-right: 10px;
 }
 
@@ -264,4 +264,121 @@ button {
   100% {
     transform: translateX(-100%);
   }
+}
+
+
+ol{
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding: 0;
+}
+
+.feriado {
+  color: red !important;
+}
+
+.first-day{
+  grid-column-start: 2;
+  background-color: rgb(211, 235, 106);
+}
+
+.first-day-1{
+  grid-column-start: 5;
+  
+}
+
+.first-day-2{
+  grid-column-start: 7;
+  color: red !important;
+}
+
+.first-day-3{
+  grid-column-start: 3;
+  color: red !important;
+}
+
+.first-day-4{
+  grid-column-start: 5;
+}
+
+.first-day-5{
+  grid-column-start: 1;
+}
+
+.first-day-6{
+  grid-column-start: 4;
+}
+
+.day-name {
+  background: #67ece1;
+  font-weight: bold;
+}
+
+.calendar {
+  text-align: center;
+  width: 70%;
+}
+
+h7{
+  font-weight: bold;
+}
+
+#prevMonth,
+#nextMonth {
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+}
+
+#prevMonth {
+  left: 0;
+}
+
+#nextMonth {
+  right: 0;
+}
+
+
+#prevMonth:hover,
+#nextMonth:hover {
+  color: blue; /* Cambia el color al pasar el mouse por encima */
+}
+
+.hidden {
+  display: none;
+}
+
+.current-day {
+  background-color: white !important;
+}
+
+
+
+.feriado1 {
+  background-color: rgb(211, 235, 106);
+  color: red !important;
+}
+
+
+
+.man{
+  background-color: rgb(211, 235, 106);
+}
+
+.noc{
+  background-color: rgb(123, 124, 219);
+}
+
+.tar {
+  background-color: orange;
+}
+
+
+.calendariio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

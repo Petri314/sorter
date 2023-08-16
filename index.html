@@ -90,163 +90,335 @@
 
   <br><br>
 
-  <h2>Calendario de turnos</h2>
 
+  <div class="calendariio">
 
+    <div class="calendar" id="calendar0">
+      <button class="prevMonthBtn">&#8249;</button>
+      <h7 class="currentMonth">Agosto 2023</h7>
+      <button class="nextMonthBtn">&#8250;</button>
+      <ol>
+        <li class="day-name">Lun</li>
+        <li class="day-name">Mar</li>
+        <li class="day-name">Mie</li>
+        <li class="day-name">Jue</li>
+        <li class="day-name">Vie</li>
+        <li class="day-name">Sab</li>
+        <li class="day-name">Dom</li>
+        <li class="first-day">1</li>
+        <li class="man">2</li>
+        <li class="man">3</li>
+        <li class="man">4</li>
+        <li class="man">5</li>
+        <li class="feriado1">6</li>
+        <li class="noc">7</li>
+        <li class="noc">8</li>
+        <li class="noc">9</li>
+        <li class="noc">10</li>
+        <li class="noc">11</li>
+        <li class="noc">12</li>
+        <li class="feriado noc">13</li>
+        <li class="tar">14</li>
+        <li class="feriado tar">15</li>
+        <li class="tar">16</li>
+        <li class="tar">17</li>
+        <li class="tar">18</li>
+        <li class="tar">19</li>
+        <li class="feriado tar">20</li>
+        <li class="man">21</li>
+        <li class="man">22</li>
+        <li class="man">23</li>
+        <li class="man">24</li>
+        <li class="man">25</li>
+        <li class="man">26</li>
+        <li class="feriado man">27</li>
+        <li class="noc">28</li>
+        <li class="noc">29</li>
+        <li class="noc">30</li>
+        <li class="noc">31</li>
+      </ol>
+    </div>
 
+    <div class="calendar hidden" id="calendar1">
+      <button class="prevMonthBtn">&#8249;</button>
+      <h7 class="currentMonth">Septiembre 2023</h7>
+      <button class="nextMonthBtn">&#8250;</button>
+      <ol>
+        <li class="day-name">Lun</li>
+        <li class="day-name">Mar</li>
+        <li class="day-name">Mie</li>
+        <li class="day-name">Jue</li>
+        <li class="day-name">Vie</li>
+        <li class="day-name">Sab</li>
+        <li class="day-name">Dom</li>
+        <li class="first-day-1 noc">1</li>
+        <li class="noc">2</li>
+        <li class="feriado noc">3</li>
+        <li class="tar">4</li>
+        <li class="tar">5</li>
+        <li class="tar">6</li>
+        <li class="tar">7</li>
+        <li class="tar">8</li>
+        <li class="tar">9</li>
+        <li class="feriado tar">10</li>
+        <li class="man">11</li>
+        <li class="man">12</li>
+        <li class="man">13</li>
+        <li class="man">14</li>
+        <li class="man">15</li>
+        <li class="man">16</li>
+        <li class="feriado man">17</li>
+        <li class="feriado noc">18</li>
+        <li class="feriado noc">19</li>
+        <li class="noc">20</li>
+        <li class="noc">21</li>
+        <li class="noc">22</li>
+        <li class="noc">23</li>
+        <li class="feriado noc">24</li>
+        <li class="tar">25</li>
+        <li class="tar">26</li>
+        <li class="tar">27</li>
+        <li class="tar">28</li>
+        <li class="tar">29</li>
+        <li class="tar">30</li>
+      </ol>
+    </div>
 
+    <div class="calendar hidden" id="calendar1">
+      <button class="prevMonthBtn">&#8249;</button>
+      <h7 class="currentMonth">Octubre 2023</h7>
+      <button class="nextMonthBtn">&#8250;</button>
+      <ol>
+        <li class="day-name">Lun</li>
+        <li class="day-name">Mar</li>
+        <li class="day-name">Mie</li>
+        <li class="day-name">Jue</li>
+        <li class="day-name">Vie</li>
+        <li class="day-name">Sab</li>
+        <li class="day-name">Dom</li>
+        <li class="first-day-2 tar">1</li>
+        <li class="man">2</li>
+        <li class="man">3</li>
+        <li class="man">4</li>
+        <li class="man">5</li>
+        <li class="man">6</li>
+        <li class="man">7</li>
+        <li class="feriado man">8</li>
+        <li class="feriado noc">9</li>
+        <li class="noc">10</li>
+        <li class="noc">11</li>
+        <li class="noc">12</li>
+        <li class="noc">13</li>
+        <li class="noc">14</li>
+        <li class="feriado noc">15</li>
+        <li class="tar">16</li>
+        <li class="tar">17</li>
+        <li class="tar">18</li>
+        <li class="tar">19</li>
+        <li class="tar">20</li>
+        <li class="tar">21</li>
+        <li class="feriado tar">22</li>
+        <li class="man">23</li>
+        <li class="man">24</li>
+        <li class="man">25</li>
+        <li class="man">26</li>
+        <li class="feriado man">27</li>
+        <li class="man">28</li>
+        <li class="feriado man">29</li>
+        <li class="noc">30</li>
+        <li class="noc">31</li>
+      </ol>
+    </div>
 
-  <div class="calendarios">
-    <table class="calendario">
-      <tr>
-        <th><a href="#" id="anterior">&lt;</a></th>
-        <th colspan="5" id="mes">Junio</th>
-        <th><a href="#" id="siguiente">&gt;</a></th>
-      </tr>
-      <tr>
-        <th>Lun</th>
-        <th>Mar</th>
-        <th>Mie</th>
-        <th>Jue</th>
-        <th>Vie</th>
-        <th>Sab</th>
-        <th>Dom</th>
-      </tr>
-      <tr class="semana1">
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>1</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-      </tr>
-      <tr class="semana2">
-        <td>5</td>
-        <td>6</td>
-        <td>7</td>
-        <td>8</td>
-        <td>9</td>
-        <td>10</td>
-        <td>11</td>
-      </tr>
-      <tr class="semana3">
-        <td>12</td>
-        <td>13</td>
-        <td>14</td>
-        <td>15</td>
-        <td>16</td>
-        <td>17</td>
-        <td>18</td>
-      </tr>
-      <tr class="semana4">
-        <td>19</td>
-        <td>20</td>
-        <td>21</td>
-        <td>22</td>
-        <td>23</td>
-        <td>24</td>
-        <td>25</td>
-      </tr>
-      <tr class="semana5">
-        <td>26</td>
-        <td>27</td>
-        <td>28</td>
-        <td>29</td>
-        <td>30</td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr class="semana6" style="display: none;">
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </table>
+    <div class="calendar hidden" id="calendar1">
+      <button class="prevMonthBtn">&#8249;</button>
+      <h7 class="currentMonth">Noviembre 2023</h7>
+      <button class="nextMonthBtn">&#8250;</button>
+      <ol>
+        <li class="day-name">Lun</li>
+        <li class="day-name">Mar</li>
+        <li class="day-name">Mie</li>
+        <li class="day-name">Jue</li>
+        <li class="day-name">Vie</li>
+        <li class="day-name">Sab</li>
+        <li class="day-name">Dom</li>
+        <li class="first-day-3 noc">1</li>
+        <li class="noc">2</li>
+        <li class="noc">3</li>
+        <li class="noc">4</li>
+        <li class="feriado noc">5</li>
+        <li class="tar">6</li>
+        <li class="tar">7</li>
+        <li class="tar">8</li>
+        <li class="tar">9</li>
+        <li class="tar">10</li>
+        <li class="tar">11</li>
+        <li class="feriado tar">12</li>
+        <li class="man">13</li>
+        <li class="man">14</li>
+        <li class="man">15</li>
+        <li class="man">16</li>
+        <li class="man">17</li>
+        <li class="man">18</li>
+        <li class="feriado man">19</li>
+        <li class="noc">20</li>
+        <li class="noc">21</li>
+        <li class="noc">22</li>
+        <li class="noc">23</li>
+        <li class="noc">24</li>
+        <li class="noc">25</li>
+        <li class="feriado noc">26</li>
+        <li class="tar">27</li>
+        <li class="tar">28</li>
+        <li class="tar">29</li>
+        <li class="tar">30</li>
+      </ol>
+    </div>
+
+    <div class="calendar hidden" id="calendar1">
+      <button class="prevMonthBtn">&#8249;</button>
+      <h7 class="currentMonth">Diciembre 2023</h7>
+      <button class="nextMonthBtn">&#8250;</button>
+      <ol>
+        <li class="day-name">Lun</li>
+        <li class="day-name">Mar</li>
+        <li class="day-name">Mie</li>
+        <li class="day-name">Jue</li>
+        <li class="day-name">Vie</li>
+        <li class="day-name">Sab</li>
+        <li class="day-name">Dom</li>
+        <li class="first-day-4 tar">1</li>
+        <li class="tar">2</li>
+        <li class="feriado tar">3</li>
+        <li class="man">4</li>
+        <li class="man">5</li>
+        <li class="man">6</li>
+        <li class="man">7</li>
+        <li class="feriado man">8</li>
+        <li class="man">9</li>
+        <li class="feriado man">10</li>
+        <li class="noc">11</li>
+        <li class="noc">12</li>
+        <li class="noc">13</li>
+        <li class="noc">14</li>
+        <li class="noc">15</li>
+        <li class="noc">16</li>
+        <li class="feriado noc">17</li>
+        <li class="tar">18</li>
+        <li class="tar">19</li>
+        <li class="tar">20</li>
+        <li class="tar">21</li>
+        <li class="tar">22</li>
+        <li class="tar">23</li>
+        <li class="feriado tar">24</li>
+        <li class="feriado man">25</li>
+        <li class="man">26</li>
+        <li class="man">27</li>
+        <li class="man">28</li>
+        <li class="man">29</li>
+        <li class="man">30</li>
+        <li class="feriado man">31</li>
+      </ol>
+    </div>
+
+    <div class="calendar hidden" id="calendar1">
+      <button class="prevMonthBtn">&#8249;</button>
+      <h7 class="currentMonth">Enero 2024</h7>
+      <button class="nextMonthBtn">&#8250;</button>
+      <ol>
+        <li class="day-name">Lun</li>
+        <li class="day-name">Mar</li>
+        <li class="day-name">Mie</li>
+        <li class="day-name">Jue</li>
+        <li class="day-name">Vie</li>
+        <li class="day-name">Sab</li>
+        <li class="day-name">Dom</li>
+        <li class="first-day-5 noc feriado">1</li>
+        <li class="noc">2</li>
+        <li class="noc">3</li>
+        <li class="noc">4</li>
+        <li class="noc">5</li>
+        <li class="noc">6</li>
+        <li class="noc feriado">7</li>
+        <li class="tar">8</li>
+        <li class="tar">9</li>
+        <li class="tar">10</li>
+        <li class="tar">11</li>
+        <li class="tar">12</li>
+        <li class="tar">13</li>
+        <li class="tar feriado">14</li>
+        <li class="man">15</li>
+        <li class="man">16</li>
+        <li class="man">17</li>
+        <li class="man">18</li>
+        <li class="man">19</li>
+        <li class="man">20</li>
+        <li class="man feriado">21</li>
+        <li class="noc">22</li>
+        <li class="noc">23</li>
+        <li class="noc">24</li>
+        <li class="noc">25</li>
+        <li class="noc">26</li>
+        <li class="noc">27</li>
+        <li class="noc feriado">28</li>
+        <li class="tar">29</li>
+        <li class="tar">30</li>
+        <li class="tar">31</li>
+      </ol>
+    </div>
+
+    <div class="calendar hidden" id="calendar1">
+      <button class="prevMonthBtn">&#8249;</button>
+      <h7 class="currentMonth">Febrero 2024</h7>
+      <button class="nextMonthBtn">&#8250;</button>
+      <ol>
+        <li class="day-name">Lun</li>
+        <li class="day-name">Mar</li>
+        <li class="day-name">Mie</li>
+        <li class="day-name">Jue</li>
+        <li class="day-name">Vie</li>
+        <li class="day-name">Sab</li>
+        <li class="day-name">Dom</li>
+        <li class="first-day-6 tar">1</li>
+        <li class="tar">2</li>
+        <li class="tar">3</li>
+        <li class="tar feriado">4</li>
+        <li class="man">5</li>
+        <li class="man">6</li>
+        <li class="man">7</li>
+        <li class="man">8</li>
+        <li class="man">9</li>
+        <li class="man">10</li>
+        <li class="man feriado">11</li>
+        <li class="noc">12</li>
+        <li class="noc">13</li>
+        <li class="noc">14</li>
+        <li class="noc">15</li>
+        <li class="noc">16</li>
+        <li class="noc">17</li>
+        <li class="noc">18</li>
+        <li class="tar feriado">19</li>
+        <li class="tar">20</li>
+        <li class="tar">21</li>
+        <li class="tar">22</li>
+        <li class="tar">23</li>
+        <li class="tar">24</li>
+        <li class="tar feriado">25</li>
+        <li class="man">26</li>
+        <li class="man">27</li>
+        <li class="man">28</li>
+        <li class="man">29</li>
+      </ol>
+    </div>
+
   </div>
 
-  <script>
-    var meses = ['Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
-    var mesActual = 0; // Junio (índice 0)
-    var anioActual = 2023;
 
-    function actualizarCalendario() {
-      var mesElemento = document.getElementById('mes');
-      mesElemento.textContent = meses[mesActual];
 
-      var calendario = document.querySelector('.calendario');
-      var celdas = calendario.querySelectorAll('td');
 
-      var diasInicioMes = [3, 5, 1, 4, 6, 2, 4]; // Día de inicio de cada mes
-      var diasFinMes = [30, 31, 31, 30, 31, 30, 31]; // Día de fin de cada mes
 
-      var diaInicio = diasInicioMes[mesActual];
-      var diaFin = diasFinMes[mesActual];
 
-      for (var i = 0; i < celdas.length; i++) {
-        var celda = celdas[i];
-        celda.textContent = '';
 
-        if (i >= diaInicio && i < diaInicio + diaFin) {
-          celda.textContent = i - diaInicio + 1;
-        }
-      }
-
-      var totalSemanas = Math.ceil((diaFin + diaInicio) / 7);
-      var semanas = calendario.querySelectorAll('tr[class^="semana"]');
-
-      for (var i = 0; i < semanas.length; i++) {
-        if (i < totalSemanas) {
-          semanas[i].style.display = 'table-row';
-        } else {
-          semanas[i].style.display = 'none';
-        }
-      }
-
-      // Mostrar sexta semana si es necesaria
-      if (totalSemanas === 6) {
-        semanas[5].style.display = 'table-row';
-      } else {
-        semanas[5].style.display = 'none';
-      }
-    }
-
-    function cambiarMesSiguiente() {
-      if (mesActual === 6) {
-        mesActual = 0;
-        anioActual++;
-      } else {
-        mesActual++;
-      }
-      actualizarCalendario();
-    }
-
-    document.getElementById('siguiente').addEventListener('click', cambiarMesSiguiente);
-
-    // Código para resaltar el día actual
-    var currentDate = new Date();
-    var currentMonth = currentDate.getMonth();
-    var currentDay = currentDate.getDate();
-    var table = document.querySelector('.calendario');
-    var cells = table.getElementsByTagName('td');
-
-    if (currentMonth === mesActual) {
-      for (var i = 0; i < cells.length; i++) {
-        var cell = cells[i];
-        var day = parseInt(cell.innerText);
-
-        if (day === currentDay) {
-          cell.classList.add('current-day');
-        }
-      }
-    }
-
-    actualizarCalendario();
-  </script>
 
 
 
@@ -389,7 +561,7 @@
       return number.toLocaleString(undefined, {
         style: 'currency',
         currency: 'CLP',
-        
+
       });
     }
 
@@ -433,6 +605,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
+
+  <script src="scripts.js"></script>
 </body>
 
 </html>
