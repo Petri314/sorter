@@ -324,6 +324,22 @@ h7{
   font-weight: bold;
 }
 
+.prevMonthBtn{
+  border: 0;
+  padding: 10px;
+  background-color: #68d4f0;
+  border-radius: 15px;
+
+}
+
+.nextMonthBtn{
+  border: 0;
+  padding: 10px;
+  background-color: #68d4f0;
+  border-radius: 15px;
+
+}
+
 #prevMonth,
 #nextMonth {
   font-size: 20px;
