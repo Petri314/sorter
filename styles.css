@@ -398,3 +398,9 @@ h7{
   justify-content: center;
   align-items: center;
 }
+
+.imgSeteo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
